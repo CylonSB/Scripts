@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-YODK=../yodk
+YODK=../../yodk
 
 # check_folder <dir> <check> runs the given check for the given directory
 function check_folder {
