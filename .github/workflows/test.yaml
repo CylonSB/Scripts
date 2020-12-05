@@ -2,6 +2,13 @@ name: Test code
 on: 
   - pull_request
 jobs:
+  check-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Readme
+        run: |
+          .ci/check-readme.sh
+
   run-tests:
     runs-on: ubuntu-latest
     steps:
@@ -16,9 +23,6 @@ jobs:
           sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
-      - name: Check Readme
-        run: |
-          .ci/check-readme.sh
       - name: Verify Yolol
         run: |
           .ci/verify-yolol.sh
