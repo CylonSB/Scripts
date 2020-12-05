@@ -1,4 +1,3 @@
 # list folders to ignore during testing here. one per line
 .ci/
 .github/
-Scripts/
