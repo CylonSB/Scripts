@@ -1,9 +1,16 @@
 name: Test code
 on: 
-  - push
   - pull_request
 jobs:
-  run-tests:
+  check-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check Readme
+        run: |
+          .ci/check-readme.sh
+
+  check-yolol:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,6 +24,44 @@ jobs:
           sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
-      - name: Run test-script
+      - name: Verify Yolol
         run: |
-          .ci/test.sh
+          .ci/verify-yolol.sh
+
+  compile-nolol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: robinraju/release-downloader@v1
+        with:
+          repository: "dbaumgarten/yodk"
+          latest: true
+          fileName: "yodk-linux.zip"
+      - name: Install depedencies
+        run: |
+          sudo apt-get install libxml2-utils
+          unzip yodk-linux.zip
+          rm yodk-linux.zip
+      - name: Compile Nolol
+        run: |
+          .ci/compile-nolol.sh
+
+  run-tests:
+    runs-on: ubuntu-latest
+    needs: "check-yolol"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: robinraju/release-downloader@v1
+        with:
+          repository: "dbaumgarten/yodk"
+          latest: true
+          fileName: "yodk-linux.zip"
+      - name: Install depedencies
+        run: |
+          sudo apt-get install libxml2-utils
+          unzip yodk-linux.zip
+          rm yodk-linux.zip
+      - name: Run Tests
+        run: |
+          .ci/run-tests.sh
+      
