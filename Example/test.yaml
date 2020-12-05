@@ -1,0 +1,16 @@
+scripts: 
+  - example.yolol
+cases:
+  - name: TestAddition1
+    inputs:
+      b: 1
+      c: 1
+    outputs:
+      a: 3
+  - name: TestAddition2
+    inputs:
+      b: 42
+      c: 1337
+    outputs:
+      a: 1379
+ 
