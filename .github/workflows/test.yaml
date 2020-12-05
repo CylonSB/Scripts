@@ -28,24 +28,6 @@ jobs:
         run: |
           .ci/verify-yolol.sh
 
-  run-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: robinraju/release-downloader@v1
-        with:
-          repository: "dbaumgarten/yodk"
-          latest: true
-          fileName: "yodk-linux.zip"
-      - name: Install depedencies
-        run: |
-          sudo apt-get install libxml2-utils
-          unzip yodk-linux.zip
-          rm yodk-linux.zip
-      - name: Run Tests
-        run: |
-          .ci/run-tests.sh
-
   compile-nolol:
     runs-on: ubuntu-latest
     steps:
@@ -63,3 +45,22 @@ jobs:
       - name: Compile Nolol
         run: |
           .ci/compile-nolol.sh
+
+  run-tests:
+    runs-on: ubuntu-latest
+    needs: "check-yolol"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: robinraju/release-downloader@v1
+        with:
+          repository: "dbaumgarten/yodk"
+          latest: true
+          fileName: "yodk-linux.zip"
+      - name: Install depedencies
+        run: |
+          sudo apt-get install libxml2-utils
+          unzip yodk-linux.zip
+          rm yodk-linux.zip
+      - name: Run Tests
+        run: |
+          .ci/run-tests.sh
