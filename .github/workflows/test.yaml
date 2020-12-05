@@ -12,21 +12,21 @@ jobs:
 
   check-yolol:
     runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - uses: robinraju/release-downloader@v1
-          with:
-            repository: "dbaumgarten/yodk"
-            latest: true
-            fileName: "yodk-linux.zip"
-        - name: Install depedencies
-          run: |
-            sudo apt-get install libxml2-utils
-            unzip yodk-linux.zip
-            rm yodk-linux.zip
-        - name: Verify Yolol
-          run: |
-            .ci/verify-yolol.sh
+    steps:
+      - uses: actions/checkout@v2
+      - uses: robinraju/release-downloader@v1
+        with:
+          repository: "dbaumgarten/yodk"
+          latest: true
+          fileName: "yodk-linux.zip"
+      - name: Install depedencies
+        run: |
+          sudo apt-get install libxml2-utils
+          unzip yodk-linux.zip
+          rm yodk-linux.zip
+      - name: Verify Yolol
+        run: |
+          .ci/verify-yolol.sh
 
   run-tests:
     runs-on: ubuntu-latest
