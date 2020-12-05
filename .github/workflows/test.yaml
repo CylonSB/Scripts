@@ -1,0 +1,22 @@
+name: Test code
+on: 
+  - push
+  - pull_request
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: robinraju/release-downloader@v1
+        with:
+          repository: "dbaumgarten/yodk"
+          latest: true
+          fileName: "yodk-linux.zip"
+      - name: Install depedencies
+        run: |
+          sudo apt-get install libxml2-utils
+          unzip yodk-linux.zip
+          rm yodk-linux.zip
+      - name: Run test-script
+        run: |
+          .ci/test.sh
