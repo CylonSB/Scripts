@@ -14,7 +14,7 @@ function check_folder {
     cd ..
 }
 
-for dir in */; do
+for dir in Scripts/*; do
     if `cat .testignore | grep -q "$dir"`; then
         echo "-----Skipping ignored folder: $dir -----"
         continue
