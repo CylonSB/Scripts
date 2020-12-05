@@ -64,3 +64,10 @@ jobs:
       - name: Run Tests
         run: |
           .ci/run-tests.sh
+
+  dev-sticky-comment:
+    uses: marocchino/sticky-pull-request-comment@v2
+    with:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      message: |
+        "This is a comment"
