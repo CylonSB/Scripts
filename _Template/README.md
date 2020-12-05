@@ -3,13 +3,14 @@
 This folder is a template for scripts. To add a new script to the library copy this folder, rename it and modify the files.
 
 Every folder **must** contain:
-- a `README.md` file (like this one) which explains what the script is for and how to use it
-- one or more `.yolol` files containing the script. These must be valid yolol. [This](https://dbaumgarten.github.io/yodk/#/cli?id=verification) tool is used to check that
-- working test-cases for the yolol-code in files called ```*test.yaml```. The format for the test is defined [here](https://dbaumgarten.github.io/yodk/#/cli?id=testing)
+- A `README.md` file (like this one) which explains what the script is for and how to use it
+- One or more `.yolol` files containing the script. These **must** be valid yolol (checked by [this](https://dbaumgarten.github.io/yodk/#/cli?id=verification) tool).
+- Working test-cases for the yolol-code in files called ```*test.yaml```. The format for the test is defined [here](https://dbaumgarten.github.io/yodk/#/cli?id=testing)
 
 You **may** include:
-- a `Development.md` file with extra technical notes about the script which may be helpful for other developers attempting to extend or modify the script.
-- ```.nolol``` files from which the .yolol files were compiled. These will also be checked for correctness.
+- A `Development.md` file with extra technical notes about the script which may be helpful for other developers attempting to extend or modify the script.
+- A `License.md` file with the license for all content in this folder. If not specified license is assumed to be [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/).
+- `.nolol` files from which the .yolol files were compiled. These will also be checked for correctness.
 
 ### Inputs
 

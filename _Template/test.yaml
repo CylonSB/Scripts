@@ -1,13 +1,13 @@
 scripts: 
   - example.yolol
 cases:
-  - name: TestAddition1
+  - name: Add Small
     inputs:
       b: 1
       c: 1
     outputs:
       a: 2
-  - name: TestAddition2
+  - name: Add Large
     inputs:
       b: 42
       c: 1337
