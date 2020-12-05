@@ -11,5 +11,5 @@ cases:
     inputs:
       a: 345345
     outputs:
-      o: 587.660
+      o: 649.094
  
