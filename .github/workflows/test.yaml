@@ -1,9 +1,8 @@
 name: Test code
 on: 
-  - push
   - pull_request
 jobs:
-  run-tests:
+  install-deps:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,6 +16,13 @@ jobs:
           sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
+
+  run-tests:
+    runs-on: ubuntu-latest
+    needs: "install-deps"
+    steps:
       - name: Run test-script
         run: |
           .ci/test.sh
+
+  
