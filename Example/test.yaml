@@ -6,7 +6,7 @@ cases:
       b: 1
       c: 1
     outputs:
-      a: 3
+      a: 2
   - name: TestAddition2
     inputs:
       b: 42
