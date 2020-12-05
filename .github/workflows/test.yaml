@@ -21,7 +21,6 @@ jobs:
           fileName: "yodk-linux.zip"
       - name: Install depedencies
         run: |
-          sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
       - name: Verify Yolol
@@ -39,7 +38,6 @@ jobs:
           fileName: "yodk-linux.zip"
       - name: Install depedencies
         run: |
-          sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
       - name: Compile Nolol
@@ -58,7 +56,6 @@ jobs:
           fileName: "yodk-linux.zip"
       - name: Install depedencies
         run: |
-          sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
       - name: Run Tests
