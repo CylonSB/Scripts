@@ -14,7 +14,7 @@ cases:
       o: 0.985
   - name: Cos 180
     inputs:
-      i: 10
+      i: 180
     outputs:
       o: -1
  
