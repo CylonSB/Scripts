@@ -4,7 +4,7 @@ This script calculates the cosine of an angle (in degrees) on an **advanced** le
 
 ## Inputs
 
-The input is a single number in the `:a` field.
+The input is a single number in the `:i` field.
 
  - `:i` number (degrees. must be greater than zero)
 
