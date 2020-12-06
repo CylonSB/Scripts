@@ -2,18 +2,18 @@
 
 This script calculates the square root of a number on a **basic** level Yolol chip.
 
-### Inputs
+## Inputs
 
 The input is a single number in the `:a` field.
 
  - `:a` number
 
-### Outputs
+## Outputs
 
 The output is a single number in the `:o` field.
 
  - `:o` Sqrt(:a)
 
-### Credits
+## Credits
 
  - Zijkhal#0154
