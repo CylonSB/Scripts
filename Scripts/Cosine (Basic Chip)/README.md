@@ -1,6 +1,6 @@
 # Cosine
 
-This script calculates the cosine of an angle (in degrees) on a **basic** level Yolol chip.
+This script calculates the cosine of an angle (in degrees) on an **advanced** level Yolol chip.
 
 ## Inputs
 
