@@ -1,0 +1,7 @@
+// This line sets up some constants. It must be run before the next
+// line. Ensure you are not using the variable names anywhere else
+// in your program.
+b=5.234 c=23.775 d=29.59 x=360 k=x*250
+
+// This line calculates the cosine of :i and puts the result into :o
+i=abs(:i%x-180)-90 o=b*i+((d*i^5)/k-c*i^3)/k :o=(o+o%0.3)/300

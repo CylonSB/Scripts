@@ -1,0 +1,20 @@
+scripts: 
+  - cos.yolol
+maxlines: 10
+cases:
+  - name: Cos 0
+    inputs:
+      i: 0
+    outputs:
+      o: 1
+  - name: Cos 10
+    inputs:
+      i: 10
+    outputs:
+      o: 0.985
+  - name: Cos 180
+    inputs:
+      i: 180
+    outputs:
+      o: -1
+ 
