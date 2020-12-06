@@ -5,4 +5,4 @@
 
 - Scripts
   - [Cosine (Basic Chip)](/Scripts/Cosine_(Basic_Chip)/)
-  - [Square Root](/Scripts/Square_Root/)
+  - [Square Root (Basic Chip)](/Scripts/Square_Root_(Basic_Chip)/)
