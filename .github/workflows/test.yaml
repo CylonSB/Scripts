@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Check Readme
         run: |
-          .ci/check-readme.sh
+          .ci/check.sh readme
 
   check-yolol:
     runs-on: ubuntu-latest
@@ -21,12 +21,11 @@ jobs:
           fileName: "yodk-linux.zip"
       - name: Install depedencies
         run: |
-          sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
       - name: Verify Yolol
         run: |
-          .ci/verify-yolol.sh
+          .ci/check.sh verify-yolol
 
   compile-nolol:
     runs-on: ubuntu-latest
@@ -39,12 +38,11 @@ jobs:
           fileName: "yodk-linux.zip"
       - name: Install depedencies
         run: |
-          sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
       - name: Compile Nolol
         run: |
-          .ci/compile-nolol.sh
+          .ci/check.sh compile-nolol
 
   run-tests:
     runs-on: ubuntu-latest
@@ -58,10 +56,9 @@ jobs:
           fileName: "yodk-linux.zip"
       - name: Install depedencies
         run: |
-          sudo apt-get install libxml2-utils
           unzip yodk-linux.zip
           rm yodk-linux.zip
       - name: Run Tests
         run: |
-          .ci/run-tests.sh
+          .ci/check.sh run-tests
       
