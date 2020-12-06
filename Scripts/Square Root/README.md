@@ -6,13 +6,13 @@ This script calculates the square root of a number on a **basic** level Yolol ch
 
 The input is a single number in the `:a` field.
 
- - `:a`: A number
+ - `:a` number
 
 ### Outputs
 
 The output is a single number in the `:o` field.
 
- - `:o`: Sqrt(:a)
+ - `:o` Sqrt(:a)
 
 ### Credits
 
