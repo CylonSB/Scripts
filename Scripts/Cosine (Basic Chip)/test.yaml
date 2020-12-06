@@ -9,12 +9,12 @@ cases:
       o: 1
   - name: Cos 10
     inputs:
-      o: 10
+      i: 10
     outputs:
       o: 0.985
   - name: Cos 180
     inputs:
-      o: 10
+      i: 10
     outputs:
       o: -1
  
