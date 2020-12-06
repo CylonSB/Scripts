@@ -1,0 +1,15 @@
+scripts: 
+  - sqrt.yolol
+maxlines: 2000
+cases:
+  - name: Sqrt Small
+    inputs:
+      a: 4
+    outputs:
+      o: 2
+  - name: Sqrt large
+    inputs:
+      a: 345345
+    outputs:
+      o: 649.094
+ 
