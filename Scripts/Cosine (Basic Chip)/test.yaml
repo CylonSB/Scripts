@@ -1,6 +1,6 @@
 scripts: 
   - cos.yolol
-maxlines: 6
+maxlines: 10
 cases:
   - name: Cos 0
     inputs:
