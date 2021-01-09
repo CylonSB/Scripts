@@ -45,7 +45,7 @@ Include these fields in the memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Pos
 
-Open the YOLOL chip and copy in the code from [Mono.yolol](/Scripts/Scripts/ISAN/Mono.yolol).
+Open the YOLOL chip and copy in the code from [Mono.yolol](/Scripts/ISAN/?id=monoyolol).
 
 ## Setting Up ISAN Quad
 
@@ -70,7 +70,7 @@ Include these fields in the memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Pos
 
-Open the YOLOL chip and copy in the code from [Quad.yolol](/Scripts/Scripts/ISAN/Quad.yolol).
+Open the YOLOL chip and copy in the code from [Quad.yolol](/Scripts/ISAN/?id=quadyolol).
 
 # Addons
 
@@ -87,7 +87,7 @@ Include these fields in a memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Vel
 
-Next open the YOLOL chip and paste in the code from [Velocity.yolol](/Scripts/Scripts/ISAN/Velocity.yolol).
+Next open the YOLOL chip and paste in the code from [Velocity.yolol](/Scripts/ISAN/?id=velocityyolol).
 
 ## UOC-Momentum Addon
 
@@ -109,7 +109,7 @@ Include these fields in a memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Orn
 
-Next open the YOLOL chip and paste in the code from [Orientation.yolol](/Scripts/Scripts/ISAN/Orientation.yolol).
+Next open the YOLOL chip and paste in the code from [Orientation.yolol](/Scripts/ISAN/?id=orientationyolol).
 
 ## WNS Addon
 
@@ -129,7 +129,7 @@ Include these fields in a memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Dst
 
-Next open the YOLOL chip and paste in the code from [WNS.yolol](/Scripts/Scripts/ISAN/WNS.yolol).
+Next open the YOLOL chip and paste in the code from [WNS.yolol](/Scripts/ISAN/?id=wnsyolol).
 
 # API Specifications
 
@@ -166,7 +166,8 @@ Requirements:
  - `Battle_Wrath` - Various design ideas and general help
  - `Archduke` - Invaluable support and document writeup
  - `Zaff` - Security and usability consultation, documentation
- - `Meboy100` - Le rubber duck 
+ - `Meboy100` - Le rubber duck
+ 
 ## Files
  
 ### Mono.yolol
