@@ -2,10 +2,10 @@
 
 ISAN is a navigation system within [Starbase](https://store.steampowered.com/app/454120/Starbase/), developed by [Collective](https://wiki.starbasegame.com/index.php/Collective). When installed on a ship, it calculates your X, Y, and Z coordinates in space, relative to Origin station.
 
-## Modularity
+# Modularity
 ISAN is designed to be extendable using addons. To accomplish this, ISAN is split into one core module, and any number of optional addons. These communicate to each other using a standardised API, allowing you to use any core with any number of addons, you can even create your own! The core module you should use depends on how much space you have on your ship, and how much you care about maintaining coordinate accuracy while moving.
 
-## Cores
+# Cores
 
 ISAN has two core modules; ISAN Mono and ISAN Quad. Mono is smaller, but inaccurate while moving, while Quad is larger, but more accurate.
 
@@ -45,7 +45,7 @@ Include these fields in the memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Pos
 
-Open the YOLOL chip and copy in the code from [Mono.yolol](Mono.yolol).
+Open the YOLOL chip and copy in the code from [Mono.yolol](Scripts/ISAN/Mono.yolol).
 
 ## Setting Up ISAN Quad
 
@@ -70,11 +70,11 @@ Include these fields in the memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Pos
 
-Open the YOLOL chip and copy in the code from [Quad.yolol](Quad.yolol).
+Open the YOLOL chip and copy in the code from [Quad.yolol](Scripts/ISAN/Quad.yolol).
 
-## Addons
+# Addons
 
-### Velocity Addon
+## Velocity Addon
 
 The velocity addon calculates the speed of your ship when moving in a straight line.
 
@@ -87,9 +87,9 @@ Include these fields in a memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Vel
 
-Next open the YOLOL chip and paste in the code from [Velocity.yolol](Velocity.yolol).
+Next open the YOLOL chip and paste in the code from [Velocity.yolol](Scripts/ISAN/Velocity.yolol).
 
-### UOC-Momentum Addon
+## UOC-Momentum Addon
 
 Universal Orientation Calculation-Momentum (UOC-M) calculates your heading and pitch while moving in a straight line.
 
@@ -109,9 +109,9 @@ Include these fields in a memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Orn
 
-Next open the YOLOL chip and paste in the code from [Orientation.yolol](Orientation.yolol).
+Next open the YOLOL chip and paste in the code from [Orientation.yolol](Scripts/ISAN/Orientation.yolol).
 
-### WNS Addon
+## WNS Addon
 
 Waypoint Navigation System (WNS) is an add-on that makes going to ISAN coordinates fast and easy. Using this system in conjunction with the UOC makes it easy to point toward a destination. To enter a destination, simply change the value of the DX, DY and DZ fields in the memory chip to the X, Y and Z of your destination. It is recommended that you put the memory chip with DX, DY and DZ fields somewhere accessible.
 
@@ -129,9 +129,9 @@ Include these fields in a memory chip:
 Open the device fields of the text panel and rename:
  - `PanelValue` to Dst
 
-Next open the YOLOL chip and paste in the code from [WNS.yolol](WNS.yolol).
+Next open the YOLOL chip and paste in the code from [WNS.yolol](Scripts/ISAN/WNS.yolol).
 
-## API Specifications
+# API Specifications
 
 If you plan on making your own addons, these are all the specs you need to know to create a fully compatible addon.
 
