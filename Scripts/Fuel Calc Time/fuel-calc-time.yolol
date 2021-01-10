@@ -10,9 +10,3 @@ out+="\nFuel: "+lf+f+lfm x/=(lfm<10) out-=lfm out+="0"+lfm
 //
 gc=(ugo-:GasContainerStoredResource)/2 rfc=(rfo-:FuelChamberFuel)/2
 goto2
-
-
-
-
-
-
