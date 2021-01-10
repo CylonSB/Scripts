@@ -1,0 +1,28 @@
+# required: list of scripts to run in parallel. Can be as many as you like
+scripts: 
+  - resource-count.yolol
+# optional: stop execution once one of the listed global variables has the given value.
+# this is checked after every executed line, which means the line which sets the done-variable is executed completely before stopping the VM
+# default is "done: 1"
+# optional: if true, ignore runtime-errors during script-execution. Default: false
+ignoreerrs: true
+# optional: Stop execution after running set amount of lines (per script)
+# default value is 2000. Set to -1 for unlimited
+maxlines: 12
+# required: list of testcases
+cases:
+  - name: TestOutput
+    # optional: global variables to set before running. ':' can be omitted
+    inputs:
+      GasNetworkMaxResource: 8000000
+      FuelChamberMaxFuel: 300000
+      MaxCoolant: 1000
+      MaxRadiatorCoolant: 1000
+      GasNetworkStoredResource: 8000000
+      FuelChamberFuel: 300000
+      StoredCoolant: 1000
+      StoredRadiatorCoolant: 1000
+    # optional: expected value for global variables after running
+    # it he values after execution the scipts do not match the values here, the test fails
+    outputs:
+      Resources: "\nGas : 100%\nFuel: 100%\nCool: 100%\nRad : 100%"
