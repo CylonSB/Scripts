@@ -17,9 +17,9 @@ The inputs are default variable names:
 
 ## Outputs
 
-The output is a string in the `:Recources` text panel.
+The output is a string in the `:Resources` text panel.
 
- - `:Recources`
+ - `:Resources`
 
 ## Credits
 
