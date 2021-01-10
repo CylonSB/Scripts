@@ -1,0 +1,12 @@
+h=3600 k=1000 f=":"
+ugo=:GasContainerStoredResource rfo=:FuelChamberFuel x=1
+tg=(ugo/k*k)/(gc+1) tf=(rfo/k*k)/(rfc+1)
+lg=tg/h/k*k lgm=(tg/h-lg)*60/k*k lf=tf/h/k*k lfm=(tf/h-lf)*60/k*k
+out="\nGas : "+lg+f+lgm x/=(lgm<10) out-=lgm out+="0"+lgm
+out+="\nFuel: "+lf+f+lfm x/=(lfm<10) out-=lfm out+="0"+lfm
+:Left=out
+//
+//
+//
+gc=(ugo-:GasContainerStoredResource)/2 rfc=(rfo-:FuelChamberFuel)/2
+goto2
