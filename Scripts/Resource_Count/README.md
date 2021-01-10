@@ -1,6 +1,6 @@
 # Resorce Count
 
-This script displays all ship resources it percents left.
+This script displays percentage remaining of all ship resources.
 
 ## Inputs
 
