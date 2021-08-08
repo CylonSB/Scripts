@@ -1,0 +1,37 @@
+include "std/logic"
+
+// These are the default field-names for the Material-Scanner
+define MATSCANNER_ACTIVE=:Active
+define MATSCANNER_SCAN=:Scan
+define MATSCANNER_INDEX=:Index
+define MATSCANNER_RESULTS=:ScanResults
+define MATSCANNER_MATERIAL=:Material
+define MATSCANNER_VOLUME=:Volume
+define MATSCANNER_RESET=:Reset
+define MATSCANNER_OUT=:Materials
+
+waitmsg="Scanning..."
+suffix1="ium"
+suffix2="ite"
+suffix3=" Ore"
+suffix4=" Crystal"
+
+while 1 do
+	logic_wait(not MATSCANNER_ACTIVE)
+	
+	while not MATSCANNER_RESULTS do
+		MATSCANNER_OUT=waitmsg
+		MATSCANNER_SCAN=1
+	end
+	MATSCANNER_OUT=""
+	
+	while MATSCANNER_INDEX<MATSCANNER_RESULTS do
+		MATSCANNER_ACTIVE=0
+		// remove suffix to save space on textpanel
+		mat=MATSCANNER_MATERIAL-suffix1-suffix2-suffix3-suffix4
+		MATSCANNER_OUT+=mat+":"+MATSCANNER_VOLUME+"\n"
+		MATSCANNER_INDEX++
+	end
+	MATSCANNER_RESET=1
+end
+

@@ -1,0 +1,6 @@
+b="Scanning..." c="ium" d="ite" e=" Ore" f=" Crystal"
+ifnot :Active thengoto2end
+ifnot :ScanResults then:Materials=b :Scan=1 goto3end :Materials=""
+if:Index>=:ScanResults thengoto6end :Active=0 g=:Material-c-d-e-f
+:Materials+=g+":"+:Volume+"\n" :Index++ goto4
+:Reset=1 goto2

@@ -1,0 +1,50 @@
+scripts: 
+  - matscan_basic.nolol
+maxlines: 20
+cases:  
+  - name: Idle
+    inputs:
+      Active: 0
+    outputs:
+      Active: 0
+  - name: Scan
+    inputs:
+      Active: 1
+    outputs:
+      Active: 1
+      Scan: 1
+      Materials: "Scanning..."
+  - name: Results
+    inputs:
+      Active: 1
+      ScanResults: 3
+      Material: Bastium Ore
+      Volume: 123
+    outputs:
+      Active: 0
+      Reset: 1
+      Index: 3
+      Materials: "Bast:123\nBast:123\nBast:123\n"
+  - name: Results2
+    inputs:
+      Active: 1
+      ScanResults: 3
+      Material: Nghurite Crystal
+      Volume: 123
+    outputs:
+      Active: 0
+      Reset: 1
+      Index: 3
+      Materials: "Nghur:123\nNghur:123\nNghur:123\n"
+  - name: Results3
+    inputs:
+      Active: 1
+      ScanResults: 3
+      Material: Ayatite Ore
+      Volume: 123
+    outputs:
+      Active: 0
+      Reset: 1
+      Index: 3
+      Materials: "Ayat:123\nAyat:123\nAyat:123\n"
+ 
