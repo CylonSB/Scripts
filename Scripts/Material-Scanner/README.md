@@ -24,3 +24,7 @@ github.com/dbaumgarten / dbaumgarten#9279
  
 ### matscan_basic.nolol
 [matscan_basic.nolol](matscan_basic.nolol ':include')
+  
+  
+\* [Nolol](https://dbaumgarten.github.io/yodk/#/nolol) is an out-of-game programming-language that is compiled to yolol.
+The yolol-files shown here were automatically created from the nolol-files. DO NOT copy the nolol-files into the game!
