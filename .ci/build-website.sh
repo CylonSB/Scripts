@@ -37,12 +37,24 @@ done
 popd >/dev/null
 
 function add_sourcefiles {
+    hadfiles=0
     if `ls -al *.${1} &> /dev/null`; then
         for file in *.${1}; do
+            hadfiles=1
             echo " " >> README.md
             echo "### ${file}" >> README.md
             echo "[${file}](`urlencode \"${file}\"` ':include')" >> README.md
         done
+    fi
+    if [ ${hadfiles} == 1 ]; then
+        if [ "${1}" == "nolol" ]; then
+            cat << EOF >> README.md
+  
+  
+\* [Nolol](https://dbaumgarten.github.io/yodk/#/nolol) is an out-of-game programming-language that is compiled to yolol.
+The yolol-files shown here were automatically created from the nolol-files. DO NOT copy the nolol-files into the game!
+EOF
+        fi
     fi
 }
 
