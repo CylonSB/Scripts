@@ -7,7 +7,7 @@ Setup assumes a single RangeFinder for the Distance calculation and a number of 
 *Field names*:
 ```
   :Approach bool   enable approach
-  :Cruise   int    LeverBindSpeed FCUForward
+  :Cruise   int    LeverBindSpeed FCUForward On: 0 - Off: 100
   :Distance float  RangeFinderDistance
   :RFC      float  RangeFinderDistance of optional extra RangeFinders
 ```
