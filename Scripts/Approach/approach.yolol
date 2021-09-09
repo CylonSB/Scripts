@@ -5,15 +5,4 @@ e=d-sp de=e-le int=int+e o=Kp*e+(Ki*int)+(Kd*de) le=e
 IF d>999 OR e<10 THEN :Approach=0 GOTO8 END
 IF o>0 THEN :FCUForward=o ELSE :FCUForward=0 END
 IF o<0 THEN :FCUBackward=-o ELSE :FCUBackward=0 END
-IF :Approach THEN GOTO3 ELSE :FCUForward=0 :FCUBackward=0 END GOTO1
-
-
-
-
-
-
-
-
-
-
-// Approach script using pid loop, adjusted for the #JiltedOP
+IF :Approach THEN GOTO3 ELSE :FCUForward=0 :FCUBackward=0 END
