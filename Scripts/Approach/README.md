@@ -7,9 +7,10 @@ Setup assumes a single RangeFinder for the Distance calculation and a number of 
 *Field names*:
 ```
   :Approach bool   enable approach
-  :Cruise   int    LeverBindSpeed FCUForward On: 0 - Off: 100
   :Distance float  RangeFinderDistance
   :RFC      float  RangeFinderDistance of optional extra RangeFinders
 ```
+
+Testing the actual approach PID loop is not possible without having an environment in the test runner that responds to eg. FCU* commands.
 
 [1]: https://www.reddit.com/r/starbase/comments/p5mifp/safely_approach_asteroids_with_a_pid_controller/
