@@ -1,0 +1,8 @@
+sp=19 Kp=0.3 Ki=0 Kd=0.5 le=0 int=0
+IF NOT :Approach THEN GOTO1 END
+d=:Distance IF :RFC AND :RFC<d THEN d=:RFC END 
+e=d-sp de=e-le int=int+e o=Kp*e+(Ki*int)+(Kd*de) le=e
+IF d>999 OR e<10 THEN :Approach=0 GOTO8 END
+IF o>0 THEN :FCUForward=o ELSE :FCUForward=0 END
+IF o<0 THEN :FCUBackward=-o ELSE :FCUBackward=0 END
+IF :Approach THEN GOTO3 ELSE :FCUForward=0 :FCUBackward=0 END
