@@ -16,5 +16,4 @@ IF :Approach THEN GOTO3 ELSE :FCUForward=0 :FCUBackward=0 END GOTO1
 
 
 
-
 // Approach script using pid loop, adjusted for the #JiltedOP
